@@ -5,14 +5,19 @@
 # The Inspec reference, with examples and extensive documentation, can be
 # found at http://inspec.io/docs/reference/resources/
 
-unless os.windows?
-  # This is an example test, replace with your own test.
-  describe user('root'), :skip do
-    it { should exist }
-  end
+describe service('WsusService') do
+  it { should be_installed }
+  it { should be_running }
+  its ('startmode') { should eq 'Auto' }
 end
 
-# This is an example test, replace it with your own test.
-describe port(80), :skip do
-  it { should_not be_listening }
+describe service('w3svc') do
+    it { should be_installed }
+    it { should be_running }
+    its ('startmode') { should eq 'Auto' }
+end
+
+describe iis_site('WSUS Administration') do
+  it { should exist }
+  it { should be_running }
 end

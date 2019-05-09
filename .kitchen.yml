@@ -1,21 +1,27 @@
----
 driver:
   name: vagrant
+  customize:
+    memory: 4096
 
 provisioner:
   name: chef_zero
-  # You may wish to disable always updating cookbooks in CI or other testing environments.
-  # For example:
-  #   always_update_cookbooks: <%= !ENV['CI'] %>
   always_update_cookbooks: true
+  product_name: chef
 
 verifier:
   name: inspec
 
-platforms:
-  - name: ubuntu-16.04
-  - name: centos-7
+transport:
+  name: winrm
+  elevated: true 
 
+platforms:
+  - name: windows_2016
+    driver:
+      box: tas50/windows_2016
+      provider: virtualbox
+      gui: false
+  
 suites:
   - name: default
     run_list:
