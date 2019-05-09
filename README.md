@@ -6,7 +6,7 @@ Requirments
 -------------------
 2016 Windows Server
 
-cookbooks
+Cookbooks
 -------------------
 
 #### default
@@ -58,7 +58,7 @@ Attributes
     <td><tt>['wsus']['products']</tt></td>
     <td>string</td>
     <td>Products for WSUS to sync</td>
-    <td>'Office 2013',
+    <td><tt>'Office 2013',
     'Office 2016',
     'Office 2019',
     'Microsoft SQL Server 2012',
@@ -71,7 +71,7 @@ Attributes
     'Windows 10 Feature on Demand',
     'Windows Server 2012 R2',
     'Windows Server 2016',
-    'Windows Server 2019'</td>
+    'Windows Server 2019'</tt></td>
   </tr> 
 </table>
 
