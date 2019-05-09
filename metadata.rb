@@ -8,5 +8,5 @@ version '0.1.0'
 chef_version '>= 13.0'
 supports 'windows'
 
-issues_url ''
-source_url ''
+issues_url 'https://github.com/tamucookbooks/wsus/issues'
+source_url 'https://github.com/tamucookbooks/wsus.git'
